@@ -17,10 +17,11 @@
             $('#large_box').click(function() {
                 //alert('you clicked the big box!');
                 $('#large_box').children().css('background-color', random_color)
+                $('#large_box').css('background-color', random_color)
                     //comenta esto cuando hayas averiguado para qué se utiliza event.stopPropagation 
             })
             $('.side_box').click(function(event) {
-                $('.side_box').siblings().css('background-color', random_color)
+                $(this).siblings().css('background-color', random_color)
                 event.stopPropagation();
             })
             $('.middle_box').click(function(event) {
